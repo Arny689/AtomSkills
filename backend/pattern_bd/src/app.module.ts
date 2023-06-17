@@ -1,10 +1,12 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { PostModule } from './post/post.module';
-import { CategoryPostModule } from './category-post/category-post.module';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
+import { PositionModule } from './position/position.module';
+import { HttpModule } from '@nestjs/axios';
+import { VacancyModule } from './vacancy/vacancy.module';
+import { InterviewModule } from './interview/interview.module';
 
 
 @Module({
@@ -35,11 +37,12 @@ import { AuthModule } from './auth/auth.module';
       // },
     })
   }),
-  PostModule,
-  CategoryPostModule,
   UsersModule,
   AuthModule,
-
+  PositionModule,
+  HttpModule,
+  VacancyModule,
+  InterviewModule
 ],
 
   controllers: [],
